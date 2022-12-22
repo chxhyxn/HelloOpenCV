@@ -72,8 +72,7 @@ while True:
     # paste frame2 on frame1
     cv2.copyTo(frame2, img_mask, frame)
 
-    output.write(frame[int((y+h/2)-videoHeight/2):int((y+h/2)+videoHeight/2),
-                 int((x+w/2)-videoWidth):int((x+w/2)-videoWidth)])
+    output.write(frame[:,:])
 
     cv2.imshow("Now enhancing...", frame)
 
